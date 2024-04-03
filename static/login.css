@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.login_main{
+    background: url("img/background_netflix.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.login_part{
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+}
+.header{
+    padding: 1rem 1.5rem;
+}
+.header_logo{
+    width: 200px;
+    height: 100px;
+    cursor: pointer;
+}
+.login_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+.login_header{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0.5rem 0;
+    margin-bottom:2rem;
+}
+.main_form{
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2.5rem 4rem;
+}
+.form_inputs{
+    outline: 0 !important;
+    border: 0 !important;
+    background-color: #333;
+    width: 20rem;
+    height: 3.5rem !important;
+    color: #fff !important;
+}
+.form_inputs:focus{
+    outline: 0 !important;
+    border: 0 !important;
+    background-color: rgb(59, 59, 59);
+}
+.form_inputs+label{
+    color: rgb(143, 140, 140);
+}
+.login_signin_btn{
+    background-color: red;
+    color: #fff;
+    margin-top: 1rem;
+    width: 20rem;
+    padding: 0.6rem 0;
+    font-weight: 700;
+    border-radius: 10px;
+}
+.check_box{
+    display: block;
+  position: relative;
+    padding: 1rem 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+
+}
+.check_box input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    top: 22px;
+    left: 0;
+    z-index: 2;
+}
+.check_box label{
+    color: #fff;
+    margin-left: 1.5rem;
+}
+.checkmark{
+position: absolute;
+  top: 22px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+}
+.check_box input:checked + span {
+    background-color: #fff;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.check_box input:checked  ~ .checkmark::after{
+    display: block;
+}
+.check_box .checkmark::after{
+  left: 9px;
+  top: 2px;
+  left: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid rgb(48, 47, 47);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.sign_up{
+    color: rgb(128, 126, 126);
+    margin-top: 5rem;
+}
+.sign_up_new{
+    display: flex;
+}
+.sign_up_new a{
+    color: #fff;
+    text-decoration: none;
+}
+.sign_up_new a:hover{
+    text-decoration: underline;
+}
+.sign_up >p{
+    width: 20rem;
+}
+@media only screen and (max-width:740px) {
+    .login_main{
+     background: black;
+
+    }
+    .form_inputs{
+        width:100%;
+       
+    }
+    .header_logo{
+        width: 180px;
+    }
+    .header{
+        padding-bottom: 0;
+    }
+    .login_header{
+        font-size: 2.5rem;
+    }
+    .main_form{
+        width: 100%;
+        padding: 0;
+        padding: 0 1rem;
+    }
+    .login_signin_btn{
+        width:100%;
+    }
+    .sign_up >p{
+        width:100%;
+    }
+} 

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Login
+{% endblock title %}
+
+{% block others %}
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+<link rel="stylesheet" href="{% static 'boot.min.css' %}">
+<link rel="stylesheet" href="{% static 'login.css' %}">
+{% endblock others %}
+</head>
+
+{% block content %}
+<div class="login_main">
+    <div class="login_part">
+        <div class="header">
+            <div class="header_logo">
+                <img src="{% static 'img/netflix.png' %}" alt="Logo">
+            </div>
+        </div>
+
+        <div class="login_form">
+         <form action="" class="main_form" method="POST">
+            {% csrf_token %}
+            <div class="login_header">
+                Sign In
+            </div>
+            {% if form.errors %}
+                
+                <div class=" my-4 text-primary_red" style="width:20rem;">
+                
+                
+                
+                <p class="text-primary_red ">
+                    
+                    {{form.non_field_errors}}
+                </p>
+                </div>
+                {% endif %}
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control form_inputs" id="floatingInput" placeholder="name@example.com" name="login">
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating">
+                <input type="password" class="form-control form_inputs" id="floatingPassword" placeholder="Password" name="password">
+                <label for="floatingPassword">Password</label>
+              </div>
+              <button type="submit" class="login_signin_btn">Sign In</button>
+            <div class="sign_up">
+                <div class="sign_up_new">
+                    <p>New to Netflix?</p>
+                    <a href="{% url 'account_signup' %}">Sign up now.</a>
+                </div>
+                <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.</p>
+           </div>
+         </form>
+        </div>
+    </div>
+    </div>
+    <script src="{% static 'boot.min.js' %}"></script>
+{% endblock content %}

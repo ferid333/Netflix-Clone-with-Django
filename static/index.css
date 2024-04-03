@@ -1,0 +1,317 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+img{
+    width: 100% !important;
+    height: auto !important;
+}
+
+.header{
+    background-image: url("img/background_netflix.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-bottom: 8px solid #222;
+}
+.header_main{
+    background: rgba(0, 0,0, 0.6);
+}
+.header_head{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+.header_logo {
+width: 250px;
+}
+.header_tools{
+    display: flex;
+}
+.header_tools div{
+    margin-right: 1.5rem;
+}
+#check_language{
+    outline: #fff;
+    border: 0;
+    background: rgba(0, 0,0, 0.5);
+    border:1px solid #fff ;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 0.6rem 1.5rem;
+    -webkit-appearance: none;
+   
+}
+.header_languages{
+    position: relative;
+}
+.header_languages::before{
+    content: "";
+    position: absolute;
+}
+.header_languages::after{
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 5px;
+    width:0; 
+    height: 0; 
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #fff;
+}
+.header_signin{
+    padding: 0.7rem 0.5rem;
+}
+.header_signin a{
+    outline: 0;
+    text-decoration: none;
+    color: #fff;
+    background-color: red;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+.header_signin a:hover{
+    color: #fff;
+    border: 0.5px solid red;
+}
+.header_middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 2rem;
+}
+.header_middle_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.header_text{
+    color: #fff;
+}
+.header_text h2{
+    font-weight:900;
+    letter-spacing: 0;
+    letter-spacing: 0;
+    text-align: center;
+    font-size: 5rem !important;
+}
+
+.header_text p:not(:first-child){
+    font-weight:900;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+.header_text p:not(:last-child){
+    font-weight:600;
+    text-align: center;
+    font-size: 2rem !important;
+}
+.header_email{
+    display: flex;
+    width: 60rem;
+    margin-top: 1.2rem;
+}
+.form-floating{
+    width: 80%;
+}
+.form-floating input{
+    outline: 0;
+    border: 0;
+    background-color: #fff;
+    width: 100%; 
+    height: 100% !important;
+    text-align: center;
+}
+.form-floating label{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.header_email_btn{
+    background-color: red;
+    outline: 0;
+    border: 0;
+    color: #fff;
+    padding:  1.5rem 1.9rem;
+    font-size: 1.4rem;
+    width: 20%;
+    height: 100%;
+    position: relative;
+    font-weight: 700;
+}
+.header_email_btn::after{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-top: 15px solid transparent;
+    border-bottom:15px solid transparent;
+    border-left: 10px solid #fff;
+    right: 10px;
+    top: 35%;
+}
+@media only screen and (max-width:1453px) {
+    .header_logo {
+      width: 190px;
+    }
+    .header_text h2{
+        font-size: 3.5rem !important;
+    }
+    .header_text p:not(:first-child){
+        font-size: 1rem;
+    }
+    .header_text p:not(:last-child){
+        font-size: 1.5rem;
+    }
+  }
+  @media only screen and (max-width:1000px) {
+    .header_email {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .header_email_btn{
+        padding:  1rem 0.7rem;
+        font-size: 1.1rem;
+        margin-top: 1.1rem;
+        width: 15%;
+    }
+    .header_email_btn::after{
+        border-top: 10px solid transparent;
+        border-bottom:10px solid transparent;
+        border-left: 7px solid #fff;
+        right: 10px;
+        top: 35%;
+    }
+  }
+
+  @media only screen and (max-width:800px) {
+    .header_logo {
+        width: 140px;
+      }
+      .form-floating{
+          width: 60%;
+    }
+  } 
+  @media only screen and (max-width:600px) {
+    .header_logo {
+        width: 100px;
+      }
+      .form-floating{
+          width: 60%;
+    }
+    .header_text h2{
+        font-size: 2.5rem !important;
+    }
+    .header_text p:not(:first-child){
+        font-size: 0.8rem;
+    }
+    .header_text p:not(:last-child){
+        font-size: 0.9rem;
+    }
+    .form-floating{
+        width: 50%;
+  }
+  }
+  .main{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    width: 100%;
+    border-bottom: 8px solid #222;
+} 
+.slide_text{
+    color: #fff;
+    max-width: 40rem;
+}
+.slide_text h2{
+    font-weight: 600;
+    font-size: 3rem !important;
+}
+.slide_text p{
+    font-weight: 600;
+    font-size: 1.2rem
+}
+.slide_img{
+    width: 500px;
+}
+@media only screen and (max-width:960px) {
+    .slide{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    } 
+  } 
+      
+.Faq{
+    background-color: black;
+    border-bottom: 8px solid #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.faq_text{
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 700;
+}
+.questions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+} 
+.question{
+    width: 50%;
+    margin-bottom: 1rem;
+}
+.question_text{
+    color: #fff;
+    background-color: #222;
+    font-size: 2.5rem;
+    padding: 1.2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.question_description{
+    color: #fff;
+    background-color: #222;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 0.1rem;
+    display: none;
+}
+.active{
+  display: block;
+} 
+.x{
+ 
+    transform: rotate(45deg); 
+}
